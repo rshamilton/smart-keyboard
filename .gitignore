@@ -7,3 +7,15 @@ _autosave-*
 \#auto_saved_files\#
 .DS_Store
 production/
+
+# old-style KiCad backups
+*.bak
+*-bak
+
+# local plugin/IDE noise
+.history/
+.vscode/
+
+# firmware secrets (if firmware lives here later)
+secrets.h
+.env
