@@ -1,0 +1,14 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "7fcce982-c3e7-4dce-88c6-9a6e7691ad19")
+	(paper "A4")
+	(title_block
+		(title "Smart Keyboard")
+		(date "2026-11-03")
+		(rev "v1.0")
+		(comment 1 "ESP32-S3 wireless keyboard")
+	)
+	(lib_symbols)
+)

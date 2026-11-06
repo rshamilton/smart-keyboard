@@ -16,6 +16,5 @@ production/
 .history/
 .vscode/
 
-# firmware secrets (if firmware lives here later)
 secrets.h
 .env

@@ -2,9 +2,183 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid 8333e35e-03af-4862-b0c0-8a8f1f93139c)
+	(uuid "8333e35e-03af-4862-b0c0-8a8f1f93139c")
 	(paper "A4")
+	(title_block
+		(title "Smart Keyboard")
+		(date "2026-11-03")
+		(rev "v1.0")
+		(comment 1 "ESP32-S3 wireless keyboard")
+	)
 	(lib_symbols)
+	(sheet
+		(at 149.86 96.52)
+		(size 120.65 66.04)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3cb69b98-1675-49ab-b832-95f98b9a3a4b")
+		(property "Sheetname" "Matrix"
+			(at 149.86 95.8084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Matrix.kicad_sch"
+			(at 149.86 163.1446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SmartKeyboard"
+				(path "/8333e35e-03af-4862-b0c0-8a8f1f93139c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 121.92 19.05)
+		(size 109.22 74.93)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7ff77871-4094-43dd-a21c-469294e891e0")
+		(property "Sheetname" "Processing"
+			(at 121.92 18.3384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Processing.kicad_sch"
+			(at 121.92 94.5646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SmartKeyboard"
+				(path "/8333e35e-03af-4862-b0c0-8a8f1f93139c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 17.78 100.33)
+		(size 124.46 91.44)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9293ca2a-040c-42fb-af19-5daae8eefd03")
+		(property "Sheetname" "Peripherals"
+			(at 17.78 99.6184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Peripherals.kicad_sch"
+			(at 17.78 192.3546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SmartKeyboard"
+				(path "/8333e35e-03af-4862-b0c0-8a8f1f93139c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.24 16.51)
+		(size 97.79 74.93)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d90237b4-1fb4-4c20-a74e-b8331df87120")
+		(property "Sheetname" "Power"
+			(at 15.24 15.7984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 15.24 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "SmartKeyboard"
+				(path "/8333e35e-03af-4862-b0c0-8a8f1f93139c"
+					(page "2")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
