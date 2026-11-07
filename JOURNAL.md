@@ -99,3 +99,30 @@ Add the LiPo battery charger (MCP73831) and battery connector to the Power sheet
 ![image](https://cdn.hackclub.com/01a1b386-96ca-727a-af94-caf307472797/paste-1794013304313.png)
 
 ![image](https://cdn.hackclub.com/01a1b386-ac62-7fbb-a993-10d50d4f6ca1/paste-1794013309298.png)
+
+## 11/7/26 - Battery charger and power path
+
+I added the battery charger to the Power sheet. I used the MCP73831-2-OT, which is the 4.2V version that matches a LiPo cell.
+
+- I powered it from VBUS and put a 4.7uF capacitor on VBUS next to it.
+- I added a 2k resistor from PROG to GND, which sets the charge current to 500mA, about a quarter of the 2000mAh battery's capacity.
+- I put a +BATT power symbol on its VBAT output with another 4.7uF capacitor to GND.
+- I left STAT open for now. It goes to the ESP32 with the rest of the sensing.
+
+For the battery I added a 2-pin connector with the value set to B2B-PH-K-S, the JST-PH header I plan to use. Pin 1 is +BATT and pin 2 is GND.
+
+Then I added the power path so the keyboard runs from USB when it's plugged in and from the battery otherwise. VBUS goes through an SS14 diode to the output, and the battery goes through an AO3401A MOSFET. The MOSFET's gate goes to VBUS with a 100k pull-down to GND, so it disconnects the battery whenever a USB is plugged in.
+
+I put a slide switch (MSK-12C02) after the power path so the battery still charges while the keyboard is switched off. I used the common pin and one side, put a no-connect flag on the unused pin, and added a VSYS label to the output for the regulator to connect to.
+
+I ran ERC. Along with the usual unused GPIOs and +3V3, it now flags STAT and the VSYS label, which only has the switch on it so far.
+
+Total time: 3.5hrs
+
+**Next up:**
+
+Add the 3.3V regulator on VSYS and more battery stuff.
+
+![image](https://cdn.hackclub.com/01a1b6ef-6d25-7d13-9a1d-37ec7aa91f44/paste-1794070505921.png)
+![image](https://cdn.hackclub.com/01a1b6f0-e7ec-71c7-94b8-84234e420b69/paste-1794070603075.png)
+![image](https://cdn.hackclub.com/01a1b6f0-36c5-71c5-b033-e4cba0923f04/paste-1794070557552.png)
