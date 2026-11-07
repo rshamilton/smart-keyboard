@@ -70,3 +70,32 @@ Start the Power sheet with the USB-C connector, its CC resistors and ESD protect
 ![image](https://cdn.hackclub.com/01a1b316-e049-7ae6-8d44-c97025cc9bbb/paste-1794005983049.png)
 
 
+## 11/6/26 - USB-C and ESD protection
+
+I started the Power sheet with the USB-C port. I used KiCad's 16-pin USB 2.0 receptacle symbol and set its value to the HRO TYPE-C-31-M-12, which is the connector I plan to use since it's cheap and has pins I can drag-solder.
+
+- I tied the two D- pins together and the two D+ pins together, since USB-C has a pair of each so the cable works either way up.
+- I added a 5.1k resistor from each CC pin to GND so a USB-C charger or computer recognizes the keyboard as a device and turns on 5V.
+- I connected the shield and GND pins to ground.
+- I put no-connect flags on SBU1 and SBU2 because USB 2.0 doesn't use them.
+- I put a VBUS power symbol on the 5V pin so the charger can pick it up later on this same sheet.
+
+Next I added a USBLC6-2SC6 ESD protection chip between the connector and the ESP32 on D- and D+, to protect the chip from static when the cable gets plugged in. I wired the data lines from the connector into one side of it, connected its VBUS and GND pins, and put USB_D- and USB_D+ hierarchical labels on the protected side.
+
+With hierarchical labels on both the Power and Processing sheets, I went to the root sheet and added matching sheet pins to the Power and Processing boxes, then wired them together. That connects the ESP32's USB pins to the port.
+
+I added PWR_FLAGs to VBUS and GND to tell ERC that the USB connector is what supplies them. Then I ran ERC, and the only errors left are the GPIOs I haven't used yet and +3V3, which won't have a source until I add the regulator.
+
+Total time: 3hrs
+
+**Next up:**
+
+Add the LiPo battery charger (MCP73831) and battery connector to the Power sheet, then the power path and power switch.
+
+![image](https://cdn.hackclub.com/01a1b386-56f5-71b9-93d5-b4a316c7b020/paste-1794013287724.png)
+
+![image](https://cdn.hackclub.com/01a1b386-7bde-7aa3-bf9f-4615c348ca4e/paste-1794013297272.png)
+
+![image](https://cdn.hackclub.com/01a1b386-96ca-727a-af94-caf307472797/paste-1794013304313.png)
+
+![image](https://cdn.hackclub.com/01a1b386-ac62-7fbb-a993-10d50d4f6ca1/paste-1794013309298.png)
